@@ -1,7 +1,7 @@
 art = userInput (
         type : "ARTIFACTORY",
         name : "Instance",
-        description : "Please select the artifactory instance to run against"
+        description : "Please select1 the artifactory instance to run against"
 )
 
 repo = userInput (
