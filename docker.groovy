@@ -21,7 +21,7 @@ artifactory(art.name) {
         packageType "docker"
     }
 
-    virtualRepository("$repo.value-virtual") {
+    virtualRepository("$repo.value") {
         def includedRepos = "$repo.value-remote,$repo.value-local".split(",")*.trim()
         repositories includedRepos
         description "Virtual gradle repository"
