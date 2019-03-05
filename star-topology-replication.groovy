@@ -17,7 +17,7 @@ targetRepo = userInput (
 
 
 artifactory(sourceArti.name) {
-    repository("FSAFA") {
+    repository(targetRepo.value) {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
