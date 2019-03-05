@@ -18,7 +18,7 @@ targetRepo = userInput (
 
 artifactory(sourceArti.name) {
     repository(targetRepo.value) {
-        starPull(targetArti.name){
+        starPull("bla"){
             socketTimeoutMillis 60000
             enableEventReplication true
             cronExp '0 0/9 14 * * ?'
