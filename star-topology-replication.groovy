@@ -18,8 +18,7 @@ repo = userInput (
 
 
 artifactory(sourceArti.name) {
-    def includedRepos = "$repo.value-remote,$repo.value-virtual".split(",")*.trim()
-    repository(includedRepos) {
+    repository("$repo.value-remote" ,"$repo.value-virtual") {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
