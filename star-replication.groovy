@@ -15,7 +15,7 @@ targetRepo = userInput (
 )
 
 artifactory(sourceArti.name) {
-    repository("npm-local", "npm-virtual") {
+  repository("${targetRepo.value}-local", "${targetRepo.value}-virtual") {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
