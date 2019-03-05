@@ -18,7 +18,7 @@ repo = userInput (
 
 
 artifactory(sourceArti.name) {
-    repository("$repo.value-remote" ,"$repo.value-local") {
+    repository("$repo.value-local") {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
