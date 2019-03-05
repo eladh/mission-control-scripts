@@ -1,4 +1,3 @@
-//Artifactory
 sourceArti = userInput (
         type : "ARTIFACTORY",
         description : "Please provide the source Artifactory you want to host the replication",
@@ -17,7 +16,7 @@ targetRepo = userInput (
 
 
 artifactory(sourceArti.name) {
-    repository("$targetRepo.value") {
+    repository(targetRepo) {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
