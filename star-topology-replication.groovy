@@ -10,15 +10,14 @@ targetArti = userInput (
 
 )
 
-repo = userInput (
+targetRepo = userInput (
         type : "STRING",
         description : "Repository Key",
 )
 
 
-
 artifactory(sourceArti.name) {
-    repository("$repo.value-local") {
+    repository(targetRepo.value) {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
