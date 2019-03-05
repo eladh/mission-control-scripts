@@ -18,7 +18,7 @@ repo = userInput (
 
 
 artifactory(sourceArti.name) {
-    repository("$repo.value-local") {
+    repository("gradle-local") {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
