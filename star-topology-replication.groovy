@@ -16,7 +16,7 @@ targetRepo = userInput (
 
 
 artifactory(sourceArti.name) {
-    repository(targetRepo) {
+    repository("npm-local") {
         starPull(targetArti.name){
             socketTimeoutMillis 60000
             enableEventReplication true
